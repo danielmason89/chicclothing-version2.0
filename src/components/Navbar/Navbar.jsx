@@ -17,7 +17,7 @@ const Navbar = () => {
                     </SearchContainer>
                 </Left>
                 <Center>
-                    <Logo>CHIC-C.</Logo>
+                    <Logo>Chic-c.</Logo>
                 </Center>
                 <Right>
                     <MenuItem>Register</MenuItem>
