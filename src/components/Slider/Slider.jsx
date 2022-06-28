@@ -21,9 +21,9 @@ const Slider = () => {
             </Arrow>
             <Wrapper slideIndex={slideIndex}>
                 {sliderItems.map((item) => (
-                    <Slide bg="item.bg">
+                    <Slide bg={item.bg}>
                         <ImgContainer>
-                            <Image src={item.img} alt="women-in-floral-dress" />
+                            <Image src={item.img} alt={item.alt} />
                         </ImgContainer>
                         <InfoContainer>
                             <Title>{item.title}</Title>
@@ -32,26 +32,6 @@ const Slider = () => {
                         </InfoContainer>
                     </Slide>
                 ))}
-                <Slide bg="fcf1ed">
-                    <ImgContainer>
-                        <Image src={require("../../assests/images/13.jpg")} alt="women-in-floral-dress" />
-                    </ImgContainer>
-                    <InfoContainer>
-                        <Title>Popular Sale</Title>
-                        <Description>Don't Compromise on Style!! Get Flat 30% off for New Arrivals.</Description>
-                        <Button>SHOP NOW</Button>
-                    </InfoContainer>
-                </Slide>
-                <Slide bg="fbf0f4">
-                    <ImgContainer>
-                        <Image src={require("../../assests/images/13.jpg")} alt="women-in-floral-dress" />
-                    </ImgContainer>
-                    <InfoContainer>
-                        <Title>Special Sale</Title>
-                        <Description>Don't Compromise on Style!! Get Flat 30% off for New Arrivals.</Description>
-                        <Button>SHOP NOW</Button>
-                    </InfoContainer>
-                </Slide>
             </Wrapper >
             <Arrow direction="right" onClick={() => handleClick("right")}>
                 <ArrowRightOutlined />
@@ -92,7 +72,7 @@ const Wrapper = styled.div`
 height: 100%;
 display: flex;
 transform: translateX(${props => props.slideIndex * -100}vw);
-transition: all .95s ease;
+transition: all 1.5s ease;
 `;
 
 const ImgContainer = styled.div`
@@ -120,7 +100,8 @@ const Button = styled.button`
 padding: 10px;
 font-size: 20px;
 background-color: transparent;
-cursor: pointer;`;
+cursor: pointer;
+`;
 
 
 const Slide = styled.div`
@@ -128,16 +109,13 @@ display: flex;
 align-items: center;
 width: 100vw;
 height: 100vh;
-background-color: #${(props) => props.bg};
+background-color: #${props => props.bg};
 `;
 
 const Image = styled.img`
 height: 80%;
 z-index: 1;
-border: 2px dotted black;
 border-radius: 0% 70% 70% 0%;
-box-shadow: 0px 0px 10px black;
-background-color: black;
 height: 95vh;
 `;
 
