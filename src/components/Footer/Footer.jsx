@@ -72,7 +72,7 @@ background-color: #${props => props.color};
 display: flex;
 align-items: center;
 justify-content: center;
-margin-bottom: 20px;
+margin-right: 20px;
 `
 
 const Center = styled.div`
@@ -92,7 +92,7 @@ flex-wrap: wrap;
 `
 const ListItem = styled.li`
 width: 50%;
-margin-bottom: 10pxs;
+margin-bottom: 10px;
 
 `
 
