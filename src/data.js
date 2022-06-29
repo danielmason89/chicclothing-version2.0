@@ -1,26 +1,26 @@
 export const sliderItems = [
   {
     id: 1,
-    img: "https://www.nicepng.com/png/full/8-88585_women-fashion-png-example-of-magazine-cover.png",
-    title: "SPRING SALE",
-    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: "f5fafd",
-    alt: "women-in-floral-spring-clothing",
-  },
-  {
-    id: 2,
     img: "https://i.ibb.co/DG69bQ4/2.png",
     title: "SUMMER COLLECTION",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: "fcf1ed",
+    bg: "fffff",
     alt: "women-in-floral-spring-dress-attire",
+  },
+  {
+    id: 2,
+    img: "https://www.nicepng.com/png/full/8-88585_women-fashion-png-example-of-magazine-cover.png",
+    title: "SPRING SALE",
+    desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+    bg: "fffff",
+    alt: "women-in-floral-spring-clothing",
   },
   {
     id: 3,
     img: "https://i.ibb.co/cXFnLLV/3.png",
     title: "LOUNGEWEAR LOVE",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-    bg: "fbf0f4",
+    bg: "fffff",
     alt: "black-women-in-spring-lounge-wear",
   },
 ];

@@ -34,7 +34,7 @@ const Navbar = () => {
 
 const StyledNavbar = styled.nav`
 height: 60px;
-
+margin-top: 20px;
 `;
 
 const Wrapper = styled.div`
