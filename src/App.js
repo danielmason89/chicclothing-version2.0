@@ -3,11 +3,12 @@ import ProductList from "./pages/ProductList/ProductList";
 import ProductPage from "./pages/Product/Product";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <Cart />
     </div>
   );
 }
