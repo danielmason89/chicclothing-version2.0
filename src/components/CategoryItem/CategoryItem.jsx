@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { mobile } from "../../responsive.js";
 
 const CategoryItem = ({ item }) => {
     return (
@@ -23,6 +23,9 @@ const Image = styled.img`
 width: 100%;
 height: 100%;
 object-fit: cover;
+${mobile({
+    height: "250vh"
+})}
 
 `
 const Info = styled.div`

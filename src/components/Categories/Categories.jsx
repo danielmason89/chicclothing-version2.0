@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { categories } from "../../data";
 import CategoryItem from "../CategoryItem/CategoryItem";
-
+import { mobile } from "../../responsive.js";
 
 const Categories = () => {
     return (
@@ -17,6 +17,10 @@ const Container = styled.div`
 display:flex;
 padding: 20px;
 justify-content: space-between;
+${mobile({
+    padding: "0px",
+    flexDirection: "column"
+})}
 `
 
 export default Categories;

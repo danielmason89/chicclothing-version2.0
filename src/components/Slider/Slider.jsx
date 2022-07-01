@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material';
 import { sliderItems } from "../../data.js";
+import { mobile } from "../../responsive.js";
 
 const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0);
@@ -47,6 +48,9 @@ display: flex;
 background-color: white; 
 position: relative;
 overflow: hidden;
+${mobile({
+    display: "none"
+})}
 `;
 
 const Arrow = styled.div`
