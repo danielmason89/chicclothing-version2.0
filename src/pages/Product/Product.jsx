@@ -8,6 +8,8 @@ import { mobile } from "../../responsive.js";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { publicRequest } from "../../requestMethods";
+import { addProduct } from "../../redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 const ProductPage = () => {
     const location = useLocation();
@@ -16,6 +18,7 @@ const ProductPage = () => {
     const [quantity, setQuantity] = useState(1);
     const [color, setColor] = useState("");
     const [size, setSize] = useState("");
+    const dispatch = useDispatch()
 
     useEffect(() => {
         const getProduct = async () => {
@@ -30,7 +33,7 @@ const ProductPage = () => {
 
     const handleQuantity = (type) => {
         if (type === "dec") {
-            quantity > 1 && setQuantity(quantity - 1);
+            quantity > 0 && setQuantity(quantity - 1);
         } else {
             setQuantity(quantity + 1);
         }
@@ -38,8 +41,8 @@ const ProductPage = () => {
 
     const handleClick = () => {
         // Update cart
-        
-    }
+        dispatch(addProduct({ ...product, quantity, color, size }));
+    };
 
 
     return (
